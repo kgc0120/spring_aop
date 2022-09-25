@@ -4,6 +4,7 @@ import com.bumblebee.aop.order.OrderRepository;
 import com.bumblebee.aop.order.OrderService;
 import com.bumblebee.aop.order.aop.AspectV4Pointcut;
 import com.bumblebee.aop.order.aop.AspectV5Order;
+import com.bumblebee.aop.order.aop.AspectV6Advice;
 import lombok.extern.slf4j.Slf4j;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -21,7 +22,8 @@ import org.springframework.context.annotation.Import;
 //@Import(AspectV2.class)
 //@Import(AspectV3.class)
 //@Import(AspectV4Pointcut.class)
-@Import({AspectV5Order.LogAspect.class, AspectV5Order.TxAspect.class})
+//@Import({AspectV5Order.LogAspect.class, AspectV5Order.TxAspect.class})
+@Import(AspectV6Advice.class)
 public class AopTest {
 
     @Autowired
