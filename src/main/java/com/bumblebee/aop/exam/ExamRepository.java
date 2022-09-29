@@ -1,5 +1,7 @@
 package com.bumblebee.aop.exam;
 
+import com.bumblebee.aop.exam.annotation.Retry;
+import com.bumblebee.aop.exam.annotation.Trace;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -14,6 +16,8 @@ public class ExamRepository {
     /*
     * 5번에 1번 실패하는 요청
     * */
+    @Trace
+    @Retry(value = 10)
     public String save(String itmeId) {
         seq++;
         if(seq % 5 == 0) {
