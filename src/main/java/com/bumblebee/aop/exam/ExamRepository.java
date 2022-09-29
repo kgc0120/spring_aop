@@ -20,6 +20,7 @@ public class ExamRepository {
     @Retry(value = 10)
     public String save(String itmeId) {
         seq++;
+        System.out.println(seq +", " + seq%5);
         if(seq % 5 == 0) {
             throw new IllegalStateException("예외 발생");
         }
