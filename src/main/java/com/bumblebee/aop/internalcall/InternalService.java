@@ -1,5 +1,16 @@
-package com.bumblebee.aop.internalcall;/**
-  * @author bumblebee
-  */
-    public class InternalService {
+package com.bumblebee.aop.internalcall;
+
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
+
+/**
+ * @author bumblebee
+ */
+@Slf4j
+@Component
+public class InternalService {
+
+    public void internal() {
+        log.info("call internal");
+    }
 }
