@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Import;
  * @author bumblebee
  */
 @Slf4j
-//@SpringBootTest(properties = {"spring.aop.proxy-target-class=false"}) //JDK 동적 프록시
+//@SpringBootTest(properties = {"spring.aop.proxy-target-class=false"}) //JDK 동적 프록시, DI 예외
 @SpringBootTest(properties = {"spring.aop.proxy-target-class=true"}) //CGLIB 동적 프록시
 @Import(ProxyDiAspect.class)
 public class ProxyDiTest {
